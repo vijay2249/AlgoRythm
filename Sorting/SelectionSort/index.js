@@ -3,7 +3,7 @@ let initial_array = [13, 46, 24, 52, 20, 9];
 console.log("Before Sorting")
 console.log(initial_array);
 
-function Selection_sort(arr) {
+function SelectionSort(arr) {
   const arr_length = arr.length;
 
   for (let i = 0; i < arr_length; i++) {
@@ -22,4 +22,4 @@ function Selection_sort(arr) {
   console.log(arr);
 }
 
-Selection_sort(initial_array);
+SelectionSort(initial_array);

@@ -20,7 +20,7 @@ Explanation: After sorting the array is: 1, 2, 3, 4, 5
 
 **Approach:**
 
-The algorithm seteps are as follows:
+The algorithm steps are as follows:
 
 1. First, we will select the range of the unsorted array. For that, we will run a loop (say i) that will signify the last index of the selected range. The loop will run backward from index n-1, and similarly, i = n-2 means tha range is from 0 to n-2, and so on.
 2. Within the loop, we will run another loop(say j, runs from 0 to i-1 though the range is from 0 to i) to push the maximum element to the last index of the selected range, by repeatedly swap adjacent elements.
@@ -30,52 +30,29 @@ The algorithm seteps are as follows:
 **Note:** *Here. after each oteration, the array becomes sorted up to the last index of the range. That is why the last index of the range decreases by 1 after each iteration. This decrement is achieved by the outer loop and the last index is represented by variable i in the following code. And the inner loop (i.e. j) helps to push the maximum element of range [0...i] to the last index(i.e. index i).*
 
 ```cpp
-#include <bits/stdc++.h>
+let initial_array = [13, 46, 24, 52, 20, 9];
 
-using namespace std;
+console.log("Before Sorting");
+console.log(initial_array);
 
-/**
- * Bubble Sort Algorithm
- * Pseudo Code
- * i, j ===> 0, 0
- * i ---> n-1 to 0
- *    * This will set largest number in the loop of j
- *    * in last index after each loops completes
- *    j ---> 0 to i-1
- *      if arr[j] > arr[j+1]
- *        swap (arr[i], arr[j+1])
- *
- */
-void bubble_sort(int arr[], int n) {
-  for (int i = n - 1; i >= 0; i--) {
-    for (int j = 0; j <= i - 1; j++) {
+function bubbleSort(arr) {
+  const arr_length = arr.length;
+
+  for (let i = arr_length - 1; i >= 0; i--) {
+    for (let j = 0; j <= i - 1; j++) {
       if (arr[j] > arr[j + 1]) {
-        int temp = arr[j + 1];
-        arr[j + 1] = arr[j];
-        arr[j] = temp;
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
       }
     }
   }
 
-  cout << "After Using Bubble Sort: " << endl;
-  for (int i = 0; i < n; i++) {
-    cout << arr[i] << " ";
-  }
-  cout << endl;
+  console.log("After Sorting");
+  console.log(arr);
 }
 
-int main() {
-  int arr[] = {13, 46, 24, 52, 20, 9};
-  int n = sizeof(arr)/sizeof(arr[0]);
-  cout << "Before Using Bubble Sort: " << endl;
-  for (int i = 0; i < n; i++) {
-    cout << arr[i] << " ";
-  }
-  cout << endl;
-
-  bubble_sort(arr, n);
-  return 0;
-}
+bubbleSort(initial_array);
 ```
 
 **Time Complexity:** O(N<sup>2</sup>), (where N = size of the array), for the worst, and average cases.
