@@ -66,3 +66,11 @@ int main() {
   return 0;
 }
 ```
+
+**Time Complexity:** O(N<sup>2</sup>), (where N = size of the array), for the best, work, and average cases.
+
+Reason: If we carefully observe, we can notice that the outer loop, say i, is running from 0 to n-2 i.e. n-1 times, and for each i, the inner loop j runs from i to n-1. For, i = 0, the inner loop runs n-1 times, for i = 1, the inner loop runs n-2 times, and so on.
+
+So, the total steps will be approximately the following: (n-1) + (n-2) + (n-3) + .... + 3 + 2 + 1. The summation is approximately the sum of the first n natural numbers i.e. (n*(n+1))/2. The precise thime complexity will be O(n<sup>2</sup>/2 + n/2). Previously, we have learned that er can ignore the lower values as well as the constant coefficients. So, the time complexity is O(n<sup>2</sup>). Here the value of n isN i.e. the size of the array.
+
+**Space Complexity: O(1)**
