@@ -3,7 +3,7 @@
 using namespace std;
 
 /**
- * Bubble Sort Algorithm
+ * Selection Sort Algorithm
  * Pseudo Code
  * i, j ===> 0, 0
  * i ---> 0 to n-1
