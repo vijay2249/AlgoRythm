@@ -1,4 +1,4 @@
-def Selection_sort():
+def SelectionSort():
     initial_values = [13, 46, 24, 52, 20, 9]
     print("Before Sorting")
     for a in initial_values:
@@ -17,4 +17,4 @@ def Selection_sort():
         print(a, end=" ")
 
 if __name__ == "__main__":
-    Selection_sort()
+    SelectionSort()
