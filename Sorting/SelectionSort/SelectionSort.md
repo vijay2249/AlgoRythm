@@ -20,7 +20,7 @@ Explanation: After sorting the array is: 1, 2, 3, 4, 5
 
 **Approach:**
 
-The algorithm seteps are as follows:
+The algorithm steps are as follows:
 
 1. First, we will select the range of the unsorted arrayusing a loop (say `i`) that indicates the starting index of range. The loop will run forward from 0 to n-1. The value i = 0 means the range is from 0 to n-1, and similarly, i=1 means the range is from 1 to n-1, and so on.
 2. Now, in each iteration, we will select the minimum element from the range of the sorted array an inner loop.
